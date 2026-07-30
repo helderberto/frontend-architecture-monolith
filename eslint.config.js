@@ -56,6 +56,9 @@ export default tseslint.config(
           default: "disallow",
           rules: [
             {
+              allow: { dependency: { kind: "type" } },
+            },
+            {
               from: { type: "authentication" },
               allow: { to: { type: ["authentication", "shared"] } },
             },
